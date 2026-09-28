@@ -1,41 +1,44 @@
-import { useRef } from "react"
 import { Link } from "react-router-dom"
 
 import { House } from "lucide-react"
 
 const name = "Irakli Mania"
 const about = "ABOUT"
+const aboutLetters = about.split("")
+
+const MAGNET_RADIUS = 10
+const MAGNET_OFFSET = 15
+
+const prefersReducedMotion = () =>
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches
 
 function Home() {
-  const aboutRef = useRef<HTMLAnchorElement>(null)
-
   const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    const element = aboutRef.current
-    if (!element) return
+    if (prefersReducedMotion()) return
 
-    const letters = element.querySelectorAll<HTMLSpanElement>("span")
-    const mouseX = e.clientX
+    const letters = e.currentTarget.querySelectorAll<HTMLElement>(
+      "[data-magnetic-letter]",
+    )
 
-    letters.forEach((letter) => {
-      const letterRect = letter.getBoundingClientRect()
-      const letterX = letterRect.left + letterRect.width / 2
+    const centers = Array.from(letters, (letter) => {
+      const rect = letter.getBoundingClientRect()
+      return rect.left + rect.width / 2
+    })
 
-      const distance = Math.abs(mouseX - letterX)
-      const maxDistance = 10
-      const strength = Math.max(0, 1 - distance / maxDistance)
+    letters.forEach((letter, index) => {
+      const distance = Math.abs(e.clientX - centers[index])
+      const strength = Math.max(0, 1 - distance / MAGNET_RADIUS)
 
-      letter.style.transform = `translateY(${-15 * strength}px)`
+      letter.style.transform = `translateY(${-MAGNET_OFFSET * strength}px)`
     })
   }
 
-  const handleMouseLeave = () => {
-    const letters = aboutRef.current?.querySelectorAll<HTMLSpanElement>(
-      "span",
-    )
-
-    letters?.forEach((letter) => {
-      letter.style.transform = "translateY(0)"
-    })
+  const handleMouseLeave = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.currentTarget
+      .querySelectorAll<HTMLElement>("[data-magnetic-letter]")
+      .forEach((letter) => {
+        letter.style.transform = "translateY(0)"
+      })
   }
 
   return (
@@ -72,15 +75,15 @@ function Home() {
 
         <div className="flex gap-5 items-center h-fit">
           <Link
-            ref={aboutRef}
             to="/about"
             className="text-lg text-accent animate-fade-right"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
           >
-            {about.split("").map((letter, index) => (
+            {aboutLetters.map((letter, index) => (
               <span
-                key={letter + index}
+                key={index}
+                data-magnetic-letter
                 className="inline-block transition-transform duration-150"
               >
                 {letter}
