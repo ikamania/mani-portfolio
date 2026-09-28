@@ -25,6 +25,9 @@
   --color-border: var(--border);
 
   --animate-fill-name: fill-name 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  --animate-fade-up: fade-up 0.3s ease-out 0.15s both;
+  --animate-fade-left: fade-left 0.5s ease-out both;
+  --animate-fade-right: fade-right 0.5s ease-out both;
 }
 
 :root {
@@ -43,5 +46,41 @@
 
   to {
     clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-left {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-right {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
