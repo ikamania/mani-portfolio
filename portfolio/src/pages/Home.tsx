@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { House } from "lucide-react"
 
 const name = "Irakli Mania"
+const nameLetters = name.split("")
 const about = "ABOUT"
 const aboutLetters = about.split("")
 
@@ -16,9 +17,7 @@ function Home() {
   const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (prefersReducedMotion()) return
 
-    const letters = e.currentTarget.querySelectorAll<HTMLElement>(
-      "[data-magnetic-letter]",
-    )
+    const letters = e.currentTarget.querySelectorAll<HTMLElement>("[data-magnetic-letter]")
 
     const centers = Array.from(letters, (letter) => {
       const rect = letter.getBoundingClientRect()
@@ -42,7 +41,7 @@ function Home() {
   }
 
   return (
-    <main className="bg-background w-screen h-screen p-10 font-grotesk">
+    <main className="bg-background w-full min-h-dvh p-10 font-grotesk">
       <section className="flex justify-between">
         <div>
           <h1
@@ -53,17 +52,36 @@ function Home() {
               [-webkit-text-stroke:1px_var(--accent)]
             "
           >
-            <span>{name}</span>
+            <span>
+              {nameLetters.map((letter, index) => (
+                <span
+                  key={index}
+                  className="inline-block whitespace-pre"
+                >
+                  {letter}
+                </span>
+              ))}
+            </span>
 
             <span
               aria-hidden="true"
               className="
-                animate-fill-name
                 absolute inset-0
                 text-accent
+                pointer-events-none
               "
             >
-              {name}
+              {nameLetters.map((letter, index) => (
+                <span
+                  key={index}
+                  className="inline-block whitespace-pre animate-fill-name fill-name-letter"
+                  style={{
+                    animationDelay: `${index * 60}ms`,
+                  }}
+                >
+                  {letter}
+                </span>
+              ))}
             </span>
           </h1>
 
@@ -90,10 +108,7 @@ function Home() {
               </span>
             ))}
           </Link>
-          <Link
-            to="/"
-            className="group text-accent animate-fade-right"
-          >
+          <Link to="/" className="group text-accent animate-fade-right">
             <House
               size={20}
               strokeWidth={1.5}
