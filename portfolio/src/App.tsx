@@ -6,7 +6,7 @@ function App() {
       <h1
         className="
           relative
-          font-edu text-5xl font-thin
+          font-grotesk text-5xl font-thin
           text-background
           [-webkit-text-stroke:1px_var(--accent)]
         "
