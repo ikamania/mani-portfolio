@@ -1,30 +1,13 @@
-const name = "Irakli Mania"
+import { HashRouter, Routes, Route } from "react-router-dom"
+import Home from "./pages/Home"
 
 function App() {
   return (
-    <main className="bg-background w-screen h-screen p-10">
-      <h1
-        className="
-          relative
-          font-grotesk text-5xl font-thin
-          text-background
-          [-webkit-text-stroke:1px_var(--accent)]
-        "
-      >
-        <span>{name}</span>
-
-        <span
-          aria-hidden="true"
-          className="
-            animate-fill-name
-            absolute inset-0
-            text-accent
-          "
-        >
-          {name}
-        </span>
-      </h1>
-    </main>
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </HashRouter>
   )
 }
 
