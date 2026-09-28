@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", sans-serif;
+  --font-edu: "Space Grotesk", cursive;
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
@@ -21,4 +23,25 @@
   --color-muted: var(--muted);
   --color-accent: var(--accent);
   --color-border: var(--border);
+
+  --animate-fill-name: fill-name 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+:root {
+  --background: #181818;
+  --surface: #10232A;
+  --text: #D3C3B9;
+  --muted: #A79E9C;
+  --accent: #B58863;
+  --border: #3D4D55;
+}
+
+@keyframes fill-name {
+  from {
+    clip-path: inset(100% 0 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
 }
