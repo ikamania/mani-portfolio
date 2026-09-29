@@ -17,9 +17,9 @@ import {
 
 const skills = [
   { name: "Python", icon: SiPython },
-  { name: "JavaScript", icon: SiJavascript },
   { name: "TypeScript", icon: SiTypescript },
   { name: "C++", icon: SiCplusplus },
+  { name: "JavaScript", icon: SiJavascript },
   { name: "Django", icon: SiDjango },
   { name: "Flask", icon: SiFlask },
   { name: "FastAPI", icon: SiFastapi },
@@ -163,16 +163,14 @@ function Skills() {
             >
               <Icon
                 size={28}
-                className="text-blue-400 transition-transform duration-200 group-hover:scale-125"
+                className="text-blue-400 hover:text-blue-600 transition-transform duration-200 group-hover:scale-135"
               />
 
               <span
                 className="
                   pointer-events-none absolute top-full left-1/2 mt-2
                   -translate-x-1/2 whitespace-nowrap
-                  text-sm text-muted
-                  opacity-0 transition-opacity duration-200
-                  group-hover:opacity-100
+                  text-sm text-muted font-bold opacity-100
                 "
               >
                 {name}
