@@ -86,16 +86,16 @@ function Home() {
             aria-label="Toggle theme"
           >
             {dark ? (
-              <Sun
-                size={20}
+              <Moon
+                size={21}
                 strokeWidth={1.5}
-                className="transition-transform hover:-translate-y-1"
+                className="transition-transform hover:scale-130"
               />
             ) : (
-              <Moon
-                size={20}
+              <Sun
+                size={21}
                 strokeWidth={1.5}
-                className="transition-transform hover:-translate-y-1"
+                className="transition-transform hover:scale-130"
               />
             )}
           </button>

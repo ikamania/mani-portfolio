@@ -23,6 +23,15 @@ button {
 }
 
 :root {
+  --background: #F5F2EF;
+  --surface: #EAE4DF;
+  --text: #282321;
+  --muted: #756C68;
+  --accent: #9A6846;
+  --border: #CFC6BF;
+}
+
+.dark {
   --background: #181818;
   --surface: #10232A;
   --text: #D3C3B9;
