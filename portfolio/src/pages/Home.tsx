@@ -114,7 +114,7 @@ function Home() {
               {nameLetters.map((letter, index) => (
                 <span
                   key={index}
-                  className="inline-block whitespace-pre"
+                  className="inline-block whitespace-pre transition-transform hover:scale-130"
                 >
                   {letter}
                 </span>
