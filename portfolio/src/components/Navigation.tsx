@@ -33,7 +33,7 @@ const Navigation = () => {
   }
 
   return (
-    <div className="flex justify-center items-center gap-5 mb-10 mr-5">
+    <div className="flex justify-center items-center gap-5 mb-15">
       <Link
         to="/about"
         className="text-lg text-accent animate-fade-right"
