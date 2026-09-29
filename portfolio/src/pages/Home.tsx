@@ -1,6 +1,7 @@
+import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
-import { House } from "lucide-react"
+import { House, Moon, Sun } from "lucide-react"
 
 const name = "Irakli Mania"
 const nameLetters = name.split("")
@@ -14,6 +15,15 @@ const prefersReducedMotion = () =>
   window.matchMedia("(prefers-reduced-motion: reduce)").matches
 
 function Home() {
+  const [dark, setDark] = useState(() => {
+    return localStorage.getItem("theme") === "dark"
+  })
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", dark)
+    localStorage.setItem("theme", dark ? "dark" : "light")
+  }, [dark])
+
   const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (prefersReducedMotion()) return
 
@@ -42,7 +52,55 @@ function Home() {
 
   return (
     <main className="bg-background w-full min-h-dvh p-10 font-grotesk">
-      <section className="flex justify-between">
+      <section className="flex flex-col">
+        <div className="flex justify-center items-center gap-5 mb-10 mr-5">
+          <Link
+            to="/about"
+            className="text-lg text-accent animate-fade-right"
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+          >
+            {aboutLetters.map((letter, index) => (
+              <span
+                key={index}
+                data-magnetic-letter
+                className="inline-block transition-transform duration-150"
+              >
+                {letter}
+              </span>
+            ))}
+          </Link>
+
+          <Link to="/" className="text-accent animate-fade-right">
+            <House
+              size={20}
+              strokeWidth={1.5}
+              className="transition-transform hover:-translate-y-1"
+            />
+          </Link>
+
+          <button
+            type="button"
+            onClick={() => setDark(!dark)}
+            className="absolute top-5 right-5 text-accent animate-fade-right cursor-pointer"
+            aria-label="Toggle theme"
+          >
+            {dark ? (
+              <Sun
+                size={20}
+                strokeWidth={1.5}
+                className="transition-transform hover:-translate-y-1"
+              />
+            ) : (
+              <Moon
+                size={20}
+                strokeWidth={1.5}
+                className="transition-transform hover:-translate-y-1"
+              />
+            )}
+          </button>
+        </div>
+
         <div>
           <h1
             className="
@@ -89,35 +147,6 @@ function Home() {
             Backend-focused developer building web applications with Python,
             and modern frontend technologies.
           </p>
-        </div>
-
-        <div className="flex gap-5 items-center h-fit">
-          <Link
-            to="/about"
-            className="text-lg text-accent animate-fade-right"
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-          >
-            {aboutLetters.map((letter, index) => (
-              <span
-                key={index}
-                data-magnetic-letter
-                className="inline-block transition-transform duration-150"
-              >
-                {letter}
-              </span>
-            ))}
-          </Link>
-          <Link to="/" className="group text-accent animate-fade-right">
-            <House
-              size={20}
-              strokeWidth={1.5}
-              className="
-                transition-transform duration-500 ease-out
-                group-hover:rotate-180
-              "
-            />
-          </Link>
         </div>
       </section>
     </main>
