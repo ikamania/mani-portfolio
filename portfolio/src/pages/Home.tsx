@@ -2,6 +2,7 @@ import Navigation from "../components/Navigation"
 import ThemeToggle from "../components/ThemeToggle"
 import Hero from "../components/Hero"
 import Skills from "../components/Skills"
+import Languages from "../components/Languages"
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
         <ThemeToggle />
         <Hero />
         <Skills />
+        <Languages />
       </section>
     </main>
   )
