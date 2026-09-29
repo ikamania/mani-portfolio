@@ -8,16 +8,16 @@ const languages = [
     description: "My mother tongue — comfortable with slang, idioms and accents.",
   },
   {
-    name: "Russian",
-    flag: "🇷🇺",
-    level: "Native",
-    description: "Spoken from childhood, used daily with family and friends.",
-  },
-  {
     name: "English",
     flag: "🇬🇧",
     level: "Fluent",
     description: "Working proficiency, used daily for docs, code and communication.",
+  },
+  {
+    name: "Russian",
+    flag: "🇷🇺",
+    level: "Native",
+    description: "Spoken from childhood, used daily with family and friends.",
   },
 ]
 
