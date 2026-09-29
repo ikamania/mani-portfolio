@@ -6,11 +6,11 @@ const nameLetters = name.split("")
 
 const Hero = () => {
   return (
-    <div>
+    <div className="border-b border-dashed border-accent p-4">
       <div className="relative">
         <h1
           className="
-            relative text-4xl sm:text-5xl lg:text-6xl
+            relative text-3xl sm:text-5xl lg:text-6xl
             font-thin text-background [-webkit-text-stroke:1px_var(--accent)]
           "
         >
@@ -48,8 +48,8 @@ const Hero = () => {
         </h1>
 
         <a href="https://share.google/aC5hqlHl7oCGnm1gO" target="_blank" className="
-          absolute flex items-center gap-2 text-md top-1
-          right-1 text-gray-500 font-bold animate-fade-right
+          absolute flex items-center gap-2 text-md -top-1
+          -right-6 text-gray-500 font-bold animate-fade-right
           cursor-pointer group
         ">
           <MapPin size={16} className="text-red-500" />
@@ -66,9 +66,11 @@ const Hero = () => {
         </a>
       </div>
 
-      <p className="indent-4 mt-3 max-w-lg text-lg text-muted animate-fade-left cursor-help">
-        Backend-focused developer building web applications with Python,
-        and modern frontend technologies.
+      <p className="indent-4 mt-3 max-w-2xl text-lg text-muted animate-fade-left cursor-help">
+        Backend-focused developer who builds web applications and the systems
+        behind them. I enjoy working from the inside out — understanding the
+        logic, designing the API, and connecting everything to an interface
+        people can actually use.
       </p>
     </div>
   )
