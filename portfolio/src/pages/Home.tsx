@@ -11,8 +11,8 @@ function Home() {
         <Navigation />
         <ThemeToggle />
         <Hero />
-        <Skills />
         <Languages />
+        <Skills />
       </section>
     </main>
   )
