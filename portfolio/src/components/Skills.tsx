@@ -137,7 +137,7 @@ function Skills() {
 
   return (
     <section className="mt-6 w-full animate-fade-right">
-      <h1 className="w-full text-center font-medium text-red-400">
+      <h1 className="w-full text-center text-red-300 text-lg">
         Technologies I've Worked With
       </h1>
 
@@ -159,7 +159,7 @@ function Skills() {
           {[...skills, ...skills].map(({ name, icon: Icon }, index) => (
             <div
               key={`${name}-${index}`}
-              className="group relative mx-6 flex items-center"
+              className="group relative mx-6 flex flex-col items-center"
             >
               <Icon
                 size={28}
@@ -168,8 +168,7 @@ function Skills() {
 
               <span
                 className="
-                  pointer-events-none absolute top-full left-1/2 mt-2
-                  -translate-x-1/2 whitespace-nowrap
+                  pointer-events-none whitespace-nowrap mt-1
                   text-sm text-muted font-bold opacity-100
                 "
               >
