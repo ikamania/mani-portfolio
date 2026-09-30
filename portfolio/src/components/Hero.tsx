@@ -6,7 +6,7 @@ const nameLetters = name.split("")
 
 const Hero = () => {
   return (
-    <div className="border-b border-dashed border-accent p-4">
+    <div className="w-full border-b border-dashed border-accent pt-8 p-4">
       <div className="relative">
         <h1
           className="

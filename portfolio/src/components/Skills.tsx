@@ -136,8 +136,8 @@ function Skills() {
   }
 
   return (
-    <section className="mt-15 w-[95%] sm:max-w-[50rem] animate-fade-right">
-      <h1 className="w-full text-center text-lg font-medium text-red-400">
+    <section className="mt-6 w-full animate-fade-right">
+      <h1 className="w-full text-center font-medium text-red-400">
         Technologies I've Worked With
       </h1>
 
@@ -149,7 +149,7 @@ function Skills() {
         onPointerCancel={handlePointerUp}
         onWheel={handleWheel}
         className={`
-          relative mt-8 overflow-hidden
+          relative mt-5 overflow-hidden
           border-y border-border py-8
           select-none touch-pan-y
           ${dragging ? "cursor-grabbing" : "cursor-grab"}

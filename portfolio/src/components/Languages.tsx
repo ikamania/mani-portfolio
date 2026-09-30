@@ -29,7 +29,7 @@ function Languages() {
   const { name, level, description } = languages[active]
 
   return (
-    <section className="mt-12 flex w-full max-w-xl animate-fade-left flex-col items-center">
+    <section className="mt-3 sm:mt-10 flex w-full animate-fade-left flex-col items-center">
       <h1 className="mb-5 text-lg font-medium text-red-300">Spoken languages</h1>
 
       <div className="grid w-full grid-cols-3 place-items-center text-3xl">
