@@ -2,6 +2,7 @@ import ThemeToggle from "../components/ThemeToggle"
 import Hero from "../components/Hero"
 import Skills from "../components/Skills"
 import Languages from "../components/Languages"
+import ScrollArrow from "../components/ScrollArrow"
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
         <Hero />
         <Languages />
         <Skills />
+        <ScrollArrow />
       </section>
     </main>
   )
