@@ -16,8 +16,8 @@ const languages = [
   {
     name: "Russian",
     flag: "🇷🇺",
-    level: "Native",
-    description: "Spoken from childhood, used daily with family and friends.",
+    level: "Intermediate",
+    description: "Grew up speaking it at home, still comfortable in everyday conversation.",
   },
 ]
 
