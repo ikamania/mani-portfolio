@@ -68,9 +68,7 @@ const Hero = () => {
 
       <p className="indent-4 mt-3 max-w-2xl text-lg text-muted animate-fade-left cursor-help">
         Backend-focused developer who builds web applications and the systems
-        behind them. I enjoy working from the inside out — understanding the
-        logic, designing the API, and connecting everything to an interface
-        people can actually use.
+        behind them.
       </p>
     </div>
   )
