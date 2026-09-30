@@ -5,8 +5,8 @@ import Languages from "../components/Languages"
 
 function Home() {
   return (
-    <main className="bg-background w-full min-h-dvh p-5 sm:p-10 font-grotesk">
-      <section className="mx-auto flex w-full max-w-[50rem] flex-col items-center">
+    <main className="bg-background w-full h-dvh p-5 sm:p-10 font-grotesk">
+      <section className="mx-auto flex w-full h-full justify-around max-w-[50rem] flex-col items-center">
         <ThemeToggle />
         <Hero />
         <Languages />
