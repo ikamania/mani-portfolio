@@ -5,19 +5,15 @@ import Languages from "../components/Languages"
 import ScrollArrow from "../components/ScrollArrow"
 import PageDots from "../components/PageDots"
 import SocialLinks from "../components/SocialLinks"
+import Section from "../components/Section"
 
 function Home() {
   return (
     <main className="w-full bg-background font-grotesk">
       <ThemeToggle />
 
-      <section
+      <Section
         id="home"
-        className="
-          relative mx-auto flex min-h-dvh max-w-[50rem]
-          flex-col items-center justify-between
-          px-5 py-8 sm:px-10
-        "
       >
         <div
           className="
@@ -30,7 +26,12 @@ function Home() {
         </div>
 
         <ScrollArrow />
-      </section>
+      </Section>
+
+      <Section id="skills">
+        <Skills />
+        <Languages />
+      </Section>
 
       <PageDots />
     </main>

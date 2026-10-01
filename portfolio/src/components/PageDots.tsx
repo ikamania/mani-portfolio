@@ -46,7 +46,7 @@ const PageDots = () => {
       className="
         fixed right-5 top-1/2
         -translate-y-1/2
-        flex flex-col gap-3
+        flex flex-col gap-3 hidden sm:flex
       "
     >
       {sections.map((section) => {
@@ -57,7 +57,7 @@ const PageDots = () => {
             key={section.id}
             onClick={() => scrollToSection(section.id)}
             aria-label={`Go to ${section.label}`}
-            className="flex items-center justify-center"
+            className="flex items-center justify-center w-6 h-3"
           >
             <span
               className={`block rounded-full transition-all duration-300 ${
