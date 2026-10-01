@@ -7,48 +7,67 @@ import PageDots from "../components/PageDots"
 import SocialLinks from "../components/SocialLinks"
 import Section from "../components/Section"
 import Timeline from "../components/Timeline"
-import Projects from "../components/Projects"
 
 function Home() {
   return (
     <main className="w-full bg-background font-grotesk">
       <ThemeToggle />
 
-      <Section
-        id="home"
-      >
+      <Section id="home">
         <div
           className="
-            flex w-full flex-1 flex-col items-center justify-center
-            mb-[10rem]
+            mb-[10rem] flex w-full flex-1 flex-col
+            items-center justify-center
           "
         >
           <Hero />
           <SocialLinks />
         </div>
 
-        <ScrollArrow text="More about me" to="skills"/>
+        <ScrollArrow
+          text="More about me"
+          to="skills"
+        />
       </Section>
 
-      <Section id="skills" className="justify-center">
+      <Section
+        id="skills"
+        className="justify-center"
+      >
         <Timeline />
 
-        <div className="mb-8 w-full text-center animate-fade-up">
+        <div className="mb-8 w-full animate-fade-up text-center">
           <p className="uppercase tracking-[0.3em] text-muted">
             My tech stack
           </p>
         </div>
 
         <Skills />
+
         <ScrollArrow
-          text="Projects"
-          to="projects"
-          className="absolute bottom-5 right-1/2 translate-x-1/2 text-muted"
+          text="More"
+          to="languages"
+          className="
+            absolute bottom-5 right-1/2
+            translate-x-1/2 text-muted
+          "
         />
       </Section>
 
-      <Section id="projects" className="justify-center">
-        <Projects />
+      <Section
+        id="languages"
+        className="justify-center"
+      >
+        <Languages />
+
+        <ScrollArrow
+          text="Projects"
+          to="projects"
+          className="
+            absolute bottom-5 right-1/2
+            translate-x-1/2 text-muted
+          "
+        />
       </Section>
 
       <PageDots />
