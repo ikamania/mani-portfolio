@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&display=swap');
 @import "tailwindcss";
 
+.world-map path {
+  fill: var(--border);
+}
+
 .world-map.highlight-georgian #GE {
-  fill: #ef4444;
+  fill: var(--map-highlight);
 }
 
 .world-map.highlight-english [class="United Kingdom"],
@@ -11,14 +15,14 @@
 .world-map.highlight-english [class="Australia"],
 .world-map.highlight-english [class="New Zealand"],
 .world-map.highlight-english [class="Philippines"] {
-  fill: #ef4444;
+  fill: var(--map-highlight);
 }
 
 .world-map.highlight-russian [class="Russian Federation"],
 .world-map.highlight-russian #BY,
 .world-map.highlight-russian #KZ,
 .world-map.highlight-russian #KG {
-  fill: #ef4444;
+  fill: var(--map-highlight);
 }
 
 button {
@@ -70,6 +74,7 @@ section {
   --muted: #756C68;
   --accent: #9A6846;
   --border: #CFC6BF;
+  --map-highlight: #9A6846;
 }
 
 .dark {
@@ -79,6 +84,7 @@ section {
   --muted: #A79E9C;
   --accent: #B58863;
   --border: #3D4D55;
+  --map-highlight: #B58863;
 }
 
 @keyframes fill-name {
