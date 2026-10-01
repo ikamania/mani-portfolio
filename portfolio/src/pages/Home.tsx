@@ -26,7 +26,7 @@ function Home() {
           <SocialLinks />
         </div>
 
-        <ScrollArrow />
+        <ScrollArrow text="More about me" to="skills"/>
       </Section>
 
       <Section id="skills" className="justify-center">
@@ -45,6 +45,11 @@ function Home() {
 
         <Skills />
         <Languages />
+        <ScrollArrow
+          text="Projects"
+          to="projects"
+          className="absolute bottom-5 right-1/2 translate-x-1/2 text-muted"
+        />
       </Section>
 
       <PageDots />

@@ -1,8 +1,15 @@
 import { ChevronDown } from "lucide-react"
 
-const ScrollArrow = () => {
+
+type ScrollArrowProps = {
+  text: string
+  to: string
+  className?: string
+}
+
+const ScrollArrow = ({ text, to, className }: ScrollArrowProps) => {
   const scrollToNext = () => {
-    document.getElementById("skills")?.scrollIntoView({
+    document.getElementById(to)?.scrollIntoView({
       behavior: "smooth",
     })
   }
@@ -10,10 +17,10 @@ const ScrollArrow = () => {
   return (
     <button
       onClick={scrollToNext}
-      className="group flex flex-col items-center gap-2 text-accent transition-colors hover:text-foreground"
+      className={`group flex flex-col items-center gap-2 text-accent transition-colors hover:text-foreground ${className}`}
     >
       <span className="text-xs uppercase tracking-[0.25em] opacity-70">
-        Explore
+        {text}
       </span>
 
       <span className="animate-bounce">
