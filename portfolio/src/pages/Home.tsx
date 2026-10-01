@@ -7,6 +7,7 @@ import PageDots from "../components/PageDots"
 import SocialLinks from "../components/SocialLinks"
 import Section from "../components/Section"
 import Timeline from "../components/Timeline"
+import Projects from "../components/Projects"
 
 function Home() {
   return (
@@ -33,23 +34,21 @@ function Home() {
         <Timeline />
 
         <div className="mb-8 w-full text-center animate-fade-up">
-          <p className="text-xs uppercase tracking-[0.3em] text-muted">
-            What I work with
-          </p>
-
-          <p className="mx-auto mt-3 max-w-lg text-sm text-muted">
-            Languages, tools, and technologies I use to build web applications
-            and the systems behind them.
+          <p className="uppercase tracking-[0.3em] text-muted">
+            My tech stack
           </p>
         </div>
 
         <Skills />
-        <Languages />
         <ScrollArrow
           text="Projects"
           to="projects"
           className="absolute bottom-5 right-1/2 translate-x-1/2 text-muted"
         />
+      </Section>
+
+      <Section id="projects" className="justify-center">
+        <Projects />
       </Section>
 
       <PageDots />
