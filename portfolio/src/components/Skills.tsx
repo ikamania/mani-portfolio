@@ -123,20 +123,8 @@ function Skills() {
     setDragging(false)
   }
 
-  const handleWheel = (event: React.WheelEvent<HTMLDivElement>) => {
-    const container = containerRef.current
-
-    if (!container) return
-
-    event.preventDefault()
-
-    container.scrollLeft += event.deltaY || event.deltaX
-
-    loopScroll()
-  }
-
   return (
-    <section className="w-full animate-fade-up">
+    <div className="w-full animate-fade-up">
       <div
         className="
           flex flex-wrap justify-center gap-x-6
@@ -154,7 +142,6 @@ function Skills() {
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerCancel={handlePointerUp}
-        onWheel={handleWheel}
         className={`
           relative mt-5 overflow-hidden
           border-y border-border py-8
@@ -185,7 +172,7 @@ function Skills() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 
