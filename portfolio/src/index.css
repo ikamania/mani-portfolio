@@ -15,6 +15,17 @@ section {
   scroll-snap-stop: always;
 }
 
+.dashed-border {
+  border-top: 1px solid var(--border);
+  background: repeating-linear-gradient(
+    to right,
+    var(--border) 0,
+    var(--border) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+
 @theme {
   --font-sans: "Inter", sans-serif;
   --font-grotesk: "Space Grotesk", cursive;
