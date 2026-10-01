@@ -1,17 +1,18 @@
 import { useState } from "react"
+import Worldmap from "./Worldmap"
 
 const languages = [
-  {
-    name: "Georgian",
-    flag: "🇬🇪",
-    level: "Native",
-    description: "My mother tongue — comfortable with slang, idioms and accents.",
-  },
   {
     name: "English",
     flag: "🇬🇧",
     level: "Fluent",
     description: "Working proficiency, used daily for docs, code and communication.",
+  },
+  {
+    name: "Georgian",
+    flag: "🇬🇪",
+    level: "Native",
+    description: "My mother tongue — comfortable with slang, idioms and accents.",
   },
   {
     name: "Russian",
@@ -63,6 +64,8 @@ function Languages() {
 
         <p className="mt-1 text-muted">{description}</p>
       </div>
+
+      <Worldmap language={languages[active].name}/>
     </section>
   )
 }
