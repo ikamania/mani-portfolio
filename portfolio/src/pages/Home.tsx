@@ -6,6 +6,7 @@ import ScrollArrow from "../components/ScrollArrow"
 import PageDots from "../components/PageDots"
 import SocialLinks from "../components/SocialLinks"
 import Section from "../components/Section"
+import Timeline from "../components/Timeline"
 
 function Home() {
   return (
@@ -28,7 +29,20 @@ function Home() {
         <ScrollArrow />
       </Section>
 
-      <Section id="skills">
+      <Section id="skills" className="justify-center">
+        <Timeline />
+
+        <div className="mb-8 w-full text-center animate-fade-up">
+          <p className="text-xs uppercase tracking-[0.3em] text-muted">
+            What I work with
+          </p>
+
+          <p className="mx-auto mt-3 max-w-lg text-sm text-muted">
+            Languages, tools, and technologies I use to build web applications
+            and the systems behind them.
+          </p>
+        </div>
+
         <Skills />
         <Languages />
       </Section>

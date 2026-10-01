@@ -29,10 +29,10 @@ function Languages() {
   const { name, level, description } = languages[active]
 
   return (
-    <section className="mt-3 sm:mt-10 flex w-full animate-fade-left flex-col items-center">
-      <h1 className="mb-5 text-lg font-medium text-red-300">Spoken languages</h1>
+    <section className="mt-3 sm:mt-10 flex w-full animate-fade-up flex-col items-center">
+      <h1 className="mb-5 text-muted">Spoken languages</h1>
 
-      <div className="grid w-full grid-cols-3 place-items-center text-3xl">
+      <div className="grid w-full grid-cols-3 place-items-center text-2xl">
         {languages.map((language, index) => (
           <button
             key={language.name}
@@ -56,7 +56,7 @@ function Languages() {
           style={{ left: `${((active + 0.5) / columns) * 100}%` }}
         />
 
-        <p className="text-accent text-lg font-bold">
+        <p className="text-accent text-md font-bold">
           {name}
           <span className="ml-2 text-sm font-normal text-red-400">{level}</span>
         </p>

@@ -136,10 +136,17 @@ function Skills() {
   }
 
   return (
-    <section className="mt-6 w-full animate-fade-right">
-      <h1 className="w-full text-center text-red-300 text-lg">
-        Technologies I've Worked With
-      </h1>
+    <section className="w-full animate-fade-up">
+      <div
+        className="
+          flex flex-wrap justify-center gap-x-6
+          text-xs uppercase tracking-wider text-accent
+      ">
+        <span>Backend</span>
+        <span>APIs</span>
+        <span>Databases</span>
+        <span>DevOps</span>
+      </div>
 
       <div
         ref={containerRef}
