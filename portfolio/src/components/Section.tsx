@@ -12,8 +12,7 @@ const Section = ({ id, children, className = "" }: SectionProps) => {
       id={id}
       className={`
         relative mx-auto
-        flex min-h-dvh w-full max-w-[50rem]
-        flex-col
+        flex min-h-dvh w-full max-w-[50rem] flex-col
         px-5 py-8 sm:px-10
         ${className}
       `}
