@@ -44,7 +44,7 @@ const PageDots = () => {
     <nav
       aria-label="Page navigation"
       className="
-        fixed right-5 top-1/2
+        fixed right-5 top-1/2 animate-fade-right
         -translate-y-1/2
         flex flex-col gap-3 hidden sm:flex
       "
