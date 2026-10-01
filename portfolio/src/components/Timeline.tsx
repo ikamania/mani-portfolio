@@ -24,7 +24,7 @@ const Timeline = () => {
   return (
     <div className="mb-10 w-full">
       <div className="mb-6 text-center">
-        <p className="text-[10px] uppercase tracking-[0.25em] text-muted sm:text-xs sm:tracking-[0.3em]">
+        <p className="lg:text-[10px] uppercase tracking-[0.25em] text-muted sm:tracking-[0.3em]">
           My Journey
         </p>
       </div>

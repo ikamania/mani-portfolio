@@ -142,10 +142,10 @@ function Skills() {
           flex flex-wrap justify-center gap-x-6
           text-xs uppercase tracking-wider text-accent
       ">
-        <span>Backend</span>
-        <span>APIs</span>
+        <span>Languages</span>
+        <span>Frameworks</span>
         <span>Databases</span>
-        <span>DevOps</span>
+        <span>Other systems</span>
       </div>
 
       <div
