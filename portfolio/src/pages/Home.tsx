@@ -7,6 +7,7 @@ import PageDots from "../components/PageDots"
 import SocialLinks from "../components/SocialLinks"
 import Section from "../components/Section"
 import Timeline from "../components/Timeline"
+import Projects from "../components/Projects"
 
 function Home() {
   return (
@@ -68,6 +69,13 @@ function Home() {
             translate-x-1/2 text-muted
           "
         />
+      </Section>
+
+      <Section
+        id="projects"
+        className="justify-center"
+      >
+        <Projects />
       </Section>
 
       <PageDots />

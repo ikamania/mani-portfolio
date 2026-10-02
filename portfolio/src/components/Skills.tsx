@@ -157,7 +157,7 @@ function Skills() {
             >
               <Icon
                 size={28}
-                className="text-blue-400 hover:text-blue-600 transition-transform duration-200 group-hover:scale-135"
+                className="text-red-400 hover:text-red-500 transition-transform duration-200 group-hover:scale-135"
               />
 
               <span
