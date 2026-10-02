@@ -1,0 +1,85 @@
+.world-map path {
+  fill: var(--border);
+  transition: fill 500ms ease;
+}
+
+.world-map.highlight-georgian #GE {
+  fill: var(--map-highlight);
+}
+
+.world-map.highlight-english [class="American Samoa"],
+.world-map.highlight-english [class="Antigua and Barbuda"],
+.world-map.highlight-english #AI,
+.world-map.highlight-english [class="Australia"],
+.world-map.highlight-english [class="Bahamas"],
+.world-map.highlight-english #BA,
+.world-map.highlight-english #BZ,
+.world-map.highlight-english #BM,
+.world-map.highlight-english #BW,
+.world-map.highlight-english #VG,
+.world-map.highlight-english #CM,
+.world-map.highlight-english [class="Canada"],
+.world-map.highlight-english [class="Cayman Islands"],
+.world-map.highlight-english #DM,
+.world-map.highlight-english [class="Falkland Islands"],
+.world-map.highlight-english [class="Fiji"],
+.world-map.highlight-english #GM,
+.world-map.highlight-english #GH,
+.world-map.highlight-english #GD,
+.world-map.highlight-english #GU,
+.world-map.highlight-english #GY,
+.world-map.highlight-english #IN,
+.world-map.highlight-english #IE,
+.world-map.highlight-english #JM,
+.world-map.highlight-english #KE,
+.world-map.highlight-english #LS,
+.world-map.highlight-english #LR,
+.world-map.highlight-english #MW,
+.world-map.highlight-english [class="Malta"],
+.world-map.highlight-english #MH,
+.world-map.highlight-english [class="Federated States of Micronesia"],
+.world-map.highlight-english #MS,
+.world-map.highlight-english #MZ,
+.world-map.highlight-english #NA,
+.world-map.highlight-english #NR,
+.world-map.highlight-english [class="New Zealand"],
+.world-map.highlight-english #NG,
+.world-map.highlight-english [class="Northern Mariana Islands"],
+.world-map.highlight-english #PK,
+.world-map.highlight-english #PW,
+.world-map.highlight-english [class="Papua New Guinea"],
+.world-map.highlight-english [class="Philippines"],
+.world-map.highlight-english [class="Puerto Rico"],
+.world-map.highlight-english #RW,
+.world-map.highlight-english [class="Saint Kitts and Nevis"],
+.world-map.highlight-english #LC,
+.world-map.highlight-english #VC,
+.world-map.highlight-english [class="Samoa"],
+.world-map.highlight-english [class="Seychelles"],
+.world-map.highlight-english #SL,
+.world-map.highlight-english [class="Solomon Islands"],
+.world-map.highlight-english #ZA,
+.world-map.highlight-english #SS,
+.world-map.highlight-english #SD,
+.world-map.highlight-english #TZ,
+.world-map.highlight-english [class="Trinidad and Tobago"],
+.world-map.highlight-english [class="Turks and Caicos Islands"],
+.world-map.highlight-english #TV,
+.world-map.highlight-english #UG,
+.world-map.highlight-english [class="United Kingdom"],
+.world-map.highlight-english [class="United States"],
+.world-map.highlight-english [class="Vanuatu"],
+.world-map.highlight-english #ZM,
+.world-map.highlight-english #ZW {
+  fill: var(--map-highlight);
+}
+
+.world-map.highlight-russian [class="Russian Federation"],
+.world-map.highlight-russian #BY,
+.world-map.highlight-russian #KZ,
+.world-map.highlight-russian #KG,
+.world-map.highlight-russian #TJ,
+.world-map.highlight-russian #TM,
+.world-map.highlight-russian #UZ {
+  fill: var(--map-highlight);
+}

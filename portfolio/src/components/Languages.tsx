@@ -31,7 +31,7 @@ function Languages() {
 
   return (
     <section className="mt-3 sm:mt-10 flex w-full animate-fade-up flex-col items-center">
-      <h1 className="mb-5 text-muted">Spoken languages</h1>
+      <h1 className="mb-5 text-lg text-muted">Languages I Speak</h1>
 
       <div className="grid w-full grid-cols-3 place-items-center text-2xl">
         {languages.map((language, index) => (
