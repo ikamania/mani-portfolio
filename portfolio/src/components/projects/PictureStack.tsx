@@ -10,10 +10,6 @@ function PictureStack({ images }: PictureStackProps) {
   const [isFullscreen, setIsFullscreen] = useState(false)
 
   useEffect(() => {
-    setCurrent(0)
-  }, [images])
-
-  useEffect(() => {
     document.body.style.overflow = isFullscreen ? "hidden" : ""
 
     return () => {
@@ -40,28 +36,34 @@ function PictureStack({ images }: PictureStackProps) {
           <div className="flex h-[16rem] w-full max-w-[30rem] items-center justify-center sm:h-[20rem]">
             <img
               src={images[current]}
-              alt="screenshot"
+              alt={`Screenshot ${current + 1} of ${images.length}`}
               onClick={() => setIsFullscreen(true)}
               className="max-h-full max-w-full cursor-pointer rounded-lg object-contain transition-transform hover:scale-[1.02]"
             />
           </div>
 
           <div className="flex w-full justify-center gap-[1rem] text-muted">
-            <LuChevronLeft
+            <button
+              type="button"
               onClick={previous}
-              size={22}
+              aria-label="Previous screenshot"
               className="cursor-pointer transition-colors hover:text-accent"
-            />
+            >
+              <LuChevronLeft size={22} />
+            </button>
 
             <span className="text-sm">
               {current + 1} / {images.length}
             </span>
 
-            <LuChevronRight
+            <button
+              type="button"
               onClick={next}
-              size={22}
+              aria-label="Next screenshot"
               className="cursor-pointer transition-colors hover:text-accent"
-            />
+            >
+              <LuChevronRight size={22} />
+            </button>
           </div>
         </div>
       </div>
@@ -69,26 +71,32 @@ function PictureStack({ images }: PictureStackProps) {
       {isFullscreen && (
         <div className="fixed inset-0 z-50 overflow-auto bg-black/70 backdrop-blur-md">
           <button
+            type="button"
             onClick={() => setIsFullscreen(false)}
-            className="fixed right-5 top-5 z-50 text-white transition-colors hover:text-accent"
+            aria-label="Close fullscreen view"
+            className="absolute bottom-5 right-5 z-30 cursor-pointer text-white transition-colors hover:text-accent"
           >
             <LuX size={28} />
           </button>
 
           <button
+            type="button"
             onClick={previous}
+            aria-label="Previous screenshot"
             className="fixed left-0 top-0 z-10 h-full w-1/2 cursor-w-resize"
           />
 
           <button
+            type="button"
             onClick={next}
+            aria-label="Next screenshot"
             className="fixed right-0 top-0 z-10 h-full w-1/2 cursor-e-resize"
           />
 
           <div className="flex min-h-screen items-center justify-center p-4">
             <img
               src={images[current]}
-              alt="screenshot"
+              alt={`Screenshot ${current + 1} of ${images.length}`}
               className="max-w-[80vw] rounded-lg object-contain"
             />
           </div>

@@ -7,7 +7,7 @@ const email = "maniaika07@gmail.com"
 
 const SocialLinks = () => {
   return (
-    <div className="mt-6 flex items-center gap-6 text-sm text-gray-500 animate-fade-left">
+    <div className="mt-6 flex items-center gap-6 text-sm text-muted animate-fade-left">
       <a
         href={github}
         target="_blank"

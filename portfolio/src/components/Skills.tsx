@@ -44,6 +44,13 @@ function Skills() {
 
   useEffect(() => {
     const speed = 40
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches
+
+    lastTime.current = performance.now()
+
+    if (prefersReducedMotion) return
 
     const animate = (time: number) => {
       const container = containerRef.current
@@ -132,7 +139,6 @@ function Skills() {
       ">
         <span>Languages</span>
         <span>Frameworks</span>
-        <span>Databases</span>
         <span>Other systems</span>
       </div>
 
@@ -157,7 +163,7 @@ function Skills() {
             >
               <Icon
                 size={28}
-                className="text-red-400 hover:text-red-500 transition-transform duration-200 group-hover:scale-135"
+                className="text-accent hover:text-text transition-transform duration-200 group-hover:scale-135"
               />
 
               <span

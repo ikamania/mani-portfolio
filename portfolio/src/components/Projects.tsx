@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useMemo, useState } from "react"
 import projectsData from "../data/projects.json"
 import Navigation from "./projects/Navigation"
 import PictureStack from "./projects/PictureStack"
@@ -32,11 +32,13 @@ function Projects() {
 
   const project = projects[activeProject]
 
-  const images = Object.entries(projectImages)
-    .filter(([path]) =>
-      path.includes(`/projects/${project.images}`),
-    )
-    .map(([, image]) => image)
+  const images = useMemo(
+    () =>
+      Object.entries(projectImages)
+        .filter(([path]) => path.includes(`/projects/${project.images}`))
+        .map(([, image]) => image),
+    [project.images],
+  )
 
   const isFirstProject = activeProject === 0
   const isLastProject = activeProject === projects.length - 1
@@ -55,9 +57,9 @@ function Projects() {
 
   return (
     <div className="flex flex-1 flex-col">
-      <h1 className="mb-2 text-center text-xl font-medium text-muted sm:mb-4 sm:text-2xl">
+      <h2 className="mb-2 text-center text-xl font-medium text-muted sm:mb-4 sm:text-2xl">
         Things I've Built
-      </h1>
+      </h2>
 
       <div className="flex flex-1 flex-col justify-between px-4 py-3 sm:p-5">
         <div className="flex flex-col gap-3 sm:flex-row sm:justify-between sm:gap-4">
@@ -85,7 +87,10 @@ function Projects() {
           </ul>
         </div>
 
-        <PictureStack images={images} />
+        <PictureStack
+          key={project.images}
+          images={images}
+        />
 
         <div className="flex flex-wrap gap-[.5rem]">
           {project.technologies.map((technology) => (
@@ -100,7 +105,7 @@ function Projects() {
           onPrevious={handlePrevious}
           onNext={handleNext}
           currentProject={activeProject + 1}
-          totaltProjects={projects.length}
+          totalProjects={projects.length}
         />
       </div>
     </div>

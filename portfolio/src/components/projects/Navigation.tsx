@@ -2,23 +2,35 @@ interface NavigationProps {
   onPrevious: () => void
   onNext: () => void
   currentProject: number
-  totaltProjects: number
+  totalProjects: number
 }
 
-function Navigation({ onPrevious, onNext, currentProject, totaltProjects }: NavigationProps) {
+function Navigation({ onPrevious, onNext, currentProject, totalProjects }: NavigationProps) {
   return (
     <div
       className="
         flex justify-between px-5 text-accent font-medium
       "
     >
-      <h1 className="cursor-pointer" onClick={onPrevious}>← Previous</h1>
+      <button
+        type="button"
+        onClick={onPrevious}
+        className="cursor-pointer"
+      >
+        ← Previous
+      </button>
 
       <span className="text-sm text-muted">
-        {currentProject}/{totaltProjects}
+        {currentProject}/{totalProjects}
       </span>
 
-      <h1 className="cursor-pointer" onClick={onNext}>Next →</h1>
+      <button
+        type="button"
+        onClick={onNext}
+        className="cursor-pointer"
+      >
+        Next →
+      </button>
     </div>
   )
 }

@@ -31,7 +31,7 @@ function Languages() {
 
   return (
     <div className="mt-3 sm:mt-10 flex w-full animate-fade-up flex-col items-center">
-      <h1 className="mb-5 text-lg text-muted">Languages I Speak</h1>
+      <h2 className="mb-5 text-lg text-muted">Languages I Speak</h2>
 
       <div className="grid w-full grid-cols-3 place-items-center text-2xl">
         {languages.map((language, index) => (
@@ -57,9 +57,9 @@ function Languages() {
           style={{ left: `${((active + 0.5) / columns) * 100}%` }}
         />
 
-        <p className="text-accent text-md font-bold">
+        <p className="text-accent text-base font-bold">
           {name}
-          <span className="ml-2 text-sm font-normal text-red-400">{level}</span>
+          <span className="ml-2 text-sm font-normal text-muted">{level}</span>
         </p>
 
         <p className="mt-1 text-muted">{description}</p>

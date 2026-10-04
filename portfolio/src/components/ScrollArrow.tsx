@@ -17,7 +17,7 @@ const ScrollArrow = ({ text, to, className }: ScrollArrowProps) => {
   return (
     <button
       onClick={scrollToNext}
-      className={`group flex flex-col items-center gap-2 text-accent transition-colors hover:text-foreground ${className}`}
+      className={`group flex flex-col items-center gap-2 text-accent transition-colors hover:text-text ${className}`}
     >
       <span className="text-xs uppercase tracking-[0.25em] opacity-70">
         {text}

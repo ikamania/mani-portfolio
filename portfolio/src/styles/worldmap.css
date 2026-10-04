@@ -4,7 +4,7 @@
 }
 
 .world-map.highlight-georgian #GE {
-  fill: var(--map-highlight);
+  fill: var(--accent);
 }
 
 .world-map.highlight-english [class="American Samoa"],
@@ -71,7 +71,7 @@
 .world-map.highlight-english [class="Vanuatu"],
 .world-map.highlight-english #ZM,
 .world-map.highlight-english #ZW {
-  fill: var(--map-highlight);
+  fill: var(--accent);
 }
 
 .world-map.highlight-russian [class="Russian Federation"],
@@ -81,5 +81,5 @@
 .world-map.highlight-russian #TJ,
 .world-map.highlight-russian #TM,
 .world-map.highlight-russian #UZ {
-  fill: var(--map-highlight);
+  fill: var(--accent);
 }

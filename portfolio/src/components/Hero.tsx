@@ -47,12 +47,12 @@ const Hero = () => {
           </span>
         </h1>
 
-        <a href="https://share.google/aC5hqlHl7oCGnm1gO" target="_blank" className="
-          absolute flex items-center gap-2 text-md -top-1
-          -right-6 text-gray-500 font-bold animate-fade-right
+        <a href="https://share.google/aC5hqlHl7oCGnm1gO" target="_blank" rel="noopener noreferrer" className="
+          absolute flex items-center gap-2 text-sm -top-1
+          -right-6 text-muted font-bold animate-fade-right
           cursor-pointer group
         ">
-          <MapPin size={16} className="text-red-500" />
+          <MapPin size={16} className="text-accent" />
           <span>Tbilisi, Georgia</span>
 
           <img
