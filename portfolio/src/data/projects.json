@@ -7,7 +7,9 @@
       "Django REST Framework",
       "React",
       "Vite",
-      "Tailwind CSS"
+      "Tailwind CSS",
+      "Docker",
+      "Docker Compose"
     ],
     "link": "https://github.com/ikamania/e-store",
     "images": "e-store/",
@@ -16,6 +18,7 @@
       "Implemented user authentication and authorization",
       "Connected a React frontend to a Django backend",
       "Built reusable UI components with React and Tailwind CSS",
+      "Built and managed a multi-container development environment using Docker and Docker Compose",
       "Learned how to structure and develop a full-stack application"
     ]
   },
@@ -28,7 +31,9 @@
       "React",
       "TypeScript",
       "Vite",
-      "Tailwind CSS"
+      "Tailwind CSS",
+      "Docker",
+      "Docker Compose"
     ],
     "link": "https://github.com/ikamania/social-media",
     "images": "social-media/",
@@ -38,6 +43,7 @@
       "Developed posts, comments, likes, and user interactions",
       "Implemented user following and profile management",
       "Built a React application using TypeScript",
+      "Built and managed a multi-container development environment using Docker and Docker Compose",
       "Learned how to structure and develop a larger full-stack application"
     ]
   },
@@ -54,7 +60,9 @@
       "Vite",
       "Tailwind CSS",
       "WebSockets",
-      "python-chess"
+      "python-chess",
+      "Docker",
+      "Docker Compose"
     ],
     "link": "https://github.com/ikamania/knightly",
     "images": "knightly/",
@@ -63,20 +71,27 @@
       "Implemented JWT-based authentication with Django REST Framework SimpleJWT",
       "Used python-chess to handle chess game logic and validate moves",
       "Implemented real-time gameplay and communication between players",
+      "Built and managed a multi-container development environment using Docker and Docker Compose",
       "Learned how to combine REST APIs with WebSocket-based communication"
     ]
   },
   {
     "title": "Sorting Visualizer",
-    "technologies": [],
+    "technologies": [
+      "C",
+      "Raylib",
+      "GCC",
+      "Make"
+    ],
     "link": "https://github.com/ikamania/sorting_visualizer",
     "images": "sorting-visualizer/",
     "learned": [
       "Implemented sorting algorithms and visualized their execution",
       "Built real-time animations to demonstrate algorithm behavior",
+      "Used Raylib for graphics rendering and user interaction",
       "Learned how different sorting algorithms work and compare in practice",
-      "Worked with graphical rendering and animation",
-      "Improved my understanding of algorithms and data structures"
+      "Improved my understanding of algorithms, arrays, and data structures",
+      "Structured a C project into multiple modules and automated builds with Make"
     ]
   }
 ]
