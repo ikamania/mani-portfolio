@@ -99,6 +99,8 @@ function Projects() {
         <Navigation
           onPrevious={handlePrevious}
           onNext={handleNext}
+          currentProject={activeProject + 1}
+          totaltProjects={projects.length}
         />
       </div>
     </div>
