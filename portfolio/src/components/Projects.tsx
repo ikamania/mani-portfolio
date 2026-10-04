@@ -4,14 +4,14 @@ import TechBadge from "./projects/TechBadge"
 
 function Projects() {
   return (
-    <section className="flex flex-1 flex-col">
+    <div className="flex flex-1 flex-col">
       <h1 className="mb-4 text-center text-2xl font-medium text-muted">
         Things I've Built
       </h1>
 
-      <div className="flex flex-1 flex-col p-5 border justify-between">
-        <div className="flex justify-between">
-          <div className="">
+      <div className="flex flex-1 flex-col justify-between p-5">
+        <div className="flex flex-col gap-4 sm:flex-row sm:justify-between">
+          <div>
             <h2 className="mb-2 text-xl font-medium text-accent">
               E-Commerce Platform
             </h2>
@@ -28,23 +28,16 @@ function Projects() {
             </a>
           </div>
 
-          <div className="mt-10">
-            <p className="max-w-sm text-sm text-muted">
-              A full-stack e-commerce platform built with FastAPI,
-              PostgreSQL, and React.
-            </p>
-
-            <ul className="mt-3 max-w-sm space-y-1 text-sm text-muted">
-              <li>• Implemented user authentication and authorization</li>
-              <li>• Designed and connected a PostgreSQL database</li>
-              <li>• Built REST APIs with FastAPI</li>
-              <li>• Learned how to structure a full-stack application</li>
-            </ul>
-          </div>
+          <ul className="max-w-sm space-y-1 text-sm text-muted">
+            <li>• Implemented user authentication and authorization</li>
+            <li>• Designed and connected a PostgreSQL database</li>
+            <li>• Built REST APIs with FastAPI</li>
+            <li>• Learned how to structure a full-stack application</li>
+          </ul>
         </div>
 
         <PhotoStack
-          images = {[
+          images={[
             "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
             "https://images.unsplash.com/photo-1556742111-a301076d9d18",
             "https://images.unsplash.com/photo-1556742212-5b211d5f2f4c",
@@ -65,7 +58,7 @@ function Projects() {
           />
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 
