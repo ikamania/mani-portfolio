@@ -1,8 +1,58 @@
+import { useState } from "react"
+import projectsData from "../data/projects.json"
 import Navigation from "./projects/Navigation"
-import PhotoStack from "./projects/PictureStack"
+import PictureStack from "./projects/PictureStack"
 import TechBadge from "./projects/TechBadge"
 
+type Project = {
+  title: string
+  technologies: string[]
+  link: string
+  images: string
+  learned: string[]
+}
+
+const projects: Project[] = projectsData
+
+const projectImages = import.meta.glob(
+  "../assets/projects/**/*.png",
+  {
+    // Import all matching images immediately and return their URL strings.
+    // eager: true   → load/import images immediately
+    // query: "?url" → get the image URL instead of the module
+    // import: "default" → use the URL as the default export
+    eager: true,
+    query: "?url",
+    import: "default",
+  },
+) as Record<string, string>
+
 function Projects() {
+  const [activeProject, setActiveProject] = useState(0)
+
+  const project = projects[activeProject]
+
+  const images = Object.entries(projectImages)
+    .filter(([path]) =>
+      path.includes(`/projects/${project.images}`),
+    )
+    .map(([, image]) => image)
+
+  const isFirstProject = activeProject === 0
+  const isLastProject = activeProject === projects.length - 1
+
+  const handlePrevious = () => {
+    if (!isFirstProject) {
+      setActiveProject((current) => current - 1)
+    }
+  }
+
+  const handleNext = () => {
+    if (!isLastProject) {
+      setActiveProject((current) => current + 1)
+    }
+  }
+
   return (
     <div className="flex flex-1 flex-col">
       <h1 className="mb-4 text-center text-2xl font-medium text-muted">
@@ -13,11 +63,11 @@ function Projects() {
         <div className="flex flex-col gap-4 sm:flex-row sm:justify-between">
           <div>
             <h2 className="mb-2 text-xl font-medium text-accent">
-              E-Commerce Platform
+              {project.title}
             </h2>
 
             <a
-              href="https://github.com/ikamania/e-store"
+              href={project.link}
               target="_blank"
               rel="noopener noreferrer"
               className="group relative text-sm text-muted"
@@ -29,34 +79,27 @@ function Projects() {
           </div>
 
           <ul className="max-w-sm space-y-1 text-sm text-muted">
-            <li>• Implemented user authentication and authorization</li>
-            <li>• Designed and connected a PostgreSQL database</li>
-            <li>• Built REST APIs with FastAPI</li>
-            <li>• Learned how to structure a full-stack application</li>
+            {project.learned.map((item) => (
+              <li key={item}>• {item}</li>
+            ))}
           </ul>
         </div>
 
-        <PhotoStack
-          images={[
-            "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
-            "https://images.unsplash.com/photo-1556742111-a301076d9d18",
-            "https://images.unsplash.com/photo-1556742212-5b211d5f2f4c",
-            "https://images.unsplash.com/photo-1556740749-887f6717d7e4",
-          ]}
+        <PictureStack images={images} />
+
+        <div className="flex flex-wrap gap-[.5rem]">
+          {project.technologies.map((technology) => (
+            <TechBadge
+              key={technology}
+              language={technology}
+            />
+          ))}
+        </div>
+
+        <Navigation
+          onPrevious={handlePrevious}
+          onNext={handleNext}
         />
-
-        <div className="flex gap-[.5rem]">
-          <TechBadge language="Python" />
-          <TechBadge language="React" />
-          <TechBadge language="Django" />
-        </div>
-
-        <div className="p-4">
-          <Navigation
-            onPrevious={() => {}}
-            onNext={() => {}}
-          />
-        </div>
       </div>
     </div>
   )
