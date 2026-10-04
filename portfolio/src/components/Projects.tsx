@@ -55,14 +55,14 @@ function Projects() {
 
   return (
     <div className="flex flex-1 flex-col">
-      <h1 className="mb-4 text-center text-2xl font-medium text-muted">
+      <h1 className="mb-2 text-center text-xl font-medium text-muted sm:mb-4 sm:text-2xl">
         Things I've Built
       </h1>
 
-      <div className="flex flex-1 flex-col justify-between p-5">
-        <div className="flex flex-col gap-4 sm:flex-row sm:justify-between">
+      <div className="flex flex-1 flex-col justify-between px-4 py-3 sm:p-5">
+        <div className="flex flex-col gap-3 sm:flex-row sm:justify-between sm:gap-4">
           <div>
-            <h2 className="mb-2 text-xl font-medium text-accent">
+            <h2 className="mb-1 text-lg font-medium text-accent sm:mb-2 sm:text-xl">
               {project.title}
             </h2>
 
@@ -78,7 +78,7 @@ function Projects() {
             </a>
           </div>
 
-          <ul className="max-w-sm space-y-1 text-sm text-muted">
+          <ul className="max-w-sm space-y-1 text-xs text-muted sm:text-sm">
             {project.learned.map((item) => (
               <li key={item}>• {item}</li>
             ))}

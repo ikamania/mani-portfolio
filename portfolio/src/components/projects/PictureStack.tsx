@@ -26,16 +26,16 @@ function PictureStack({ images }: PictureStackProps) {
 
   return (
     <div className="flex w-full">
-      <div className="flex flex-col items-center">
-        <div className="flex h-[20rem] w-[30rem] items-center justify-center">
+      <div className="flex flex-col">
+        <div className="flex h-[16rem] w-full max-w-[30rem] items-center justify-center sm:h-[20rem]">
           <img
             src={images[current]}
-            alt={`Screenshot ${current + 1}`}
+            alt="screenshot"
             className="max-h-full max-w-full rounded-lg object-contain"
           />
         </div>
 
-        <div className="flex gap-[1rem] text-muted">
+        <div className="flex gap-[1rem] text-muted w-full justify-center">
           <LuChevronLeft
             onClick={previous}
             size={22}
