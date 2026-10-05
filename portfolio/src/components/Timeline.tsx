@@ -12,7 +12,7 @@ const timeline = [
   },
   {
     year: "2026",
-    title: "Tbilisi State University",
+    title: "TSU",
     description: "Started studying computer science.",
     link: "https://www.tsu.ge/",
   },
@@ -32,14 +32,16 @@ const Timeline = () => {
       <div className="relative">
         <div className="absolute left-0 right-0 top-1.5 border-t border-dashed border-border sm:top-2" />
 
-        <div className="relative grid grid-cols-7">
+        <div className="grid grid-cols-3 sm:grid-cols-7">
           {years.map((year) => {
             const milestone = timeline.find((item) => item.year === year)
 
             return (
               <div
                 key={year}
-                className="group relative min-w-0"
+                className={`group relative min-w-0 ${
+                    !milestone ? "hidden sm:block" : "flex flex-col items-center sm:block"
+                  }`}
               >
                 <div
                   className={
@@ -54,7 +56,7 @@ const Timeline = () => {
 
                 <span
                   className={
-                    `inline-block origin-left text-[9px] transition-transform
+                    `inline-block origin-left text-sm transition-transform
                     duration-200 ease-out group-hover:scale-110 sm:text-xs ${
                     milestone
                       ? "font-bold text-accent"
@@ -72,18 +74,18 @@ const Timeline = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="
-                          inline-block origin-left text-xs font-medium
+                          inline-block origin-left text-sm font-medium
                           leading-tight text-text underline-offset-2
-                          transition-transform duration-200 ease-out 
+                          transition-transform duration-200 ease-out
                           group-hover:scale-110 hover:underline sm:text-sm
                         ">
                         {milestone.title}
                       </a>
                     ) : (
                       <h3 className="
-                        inline-block origin-left text-[10px] font-medium
+                        inline-block origin-left text-sm font-medium text-center
                         leading-tight text-text transition-transform duration-200
-                        ease-out group-hover:scale-110 sm:text-sm
+                        ease-out group-hover:scale-110 sm:text-sm sm:text-left
                       ">
                         {milestone.title}
                       </h3>

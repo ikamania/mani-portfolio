@@ -38,7 +38,11 @@ function PictureStack({ images }: PictureStackProps) {
               src={images[current]}
               alt={`Screenshot ${current + 1} of ${images.length}`}
               onClick={() => setIsFullscreen(true)}
-              className="mb-[1rem] max-h-full max-w-full cursor-pointer object-contain transition-transform hover:scale-[1.02]"
+              className="
+                mb-[1rem] max-h-full max-w-full cursor-pointer object-contain
+                transition-transform hover:scale-[1.02] border border-muted
+                rounded-lg
+              "
             />
           </div>
 
