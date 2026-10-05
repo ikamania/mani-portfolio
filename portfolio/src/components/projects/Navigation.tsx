@@ -15,7 +15,7 @@ function Navigation({ onPrevious, onNext, currentProject, totalProjects }: Navig
       <button
         type="button"
         onClick={onPrevious}
-        className="cursor-pointer"
+        className="cursor-pointer transition-colors duration-300 hover:text-accent/60"
       >
         ← Previous
       </button>
@@ -27,7 +27,7 @@ function Navigation({ onPrevious, onNext, currentProject, totalProjects }: Navig
       <button
         type="button"
         onClick={onNext}
-        className="cursor-pointer"
+        className="cursor-pointer transition-colors duration-300 hover:text-accent/60"
       >
         Next →
       </button>
