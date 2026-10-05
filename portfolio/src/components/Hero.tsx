@@ -1,5 +1,5 @@
 import { MapPin } from "lucide-react"
-import georgia from "../assets/georgia.svg"
+import georgia from "../assets/maps/georgia.svg"
 
 const name = "Irakli Mania"
 const nameLetters = name.split("")

@@ -1,4 +1,4 @@
-import WorldMap from "../assets/world.svg?react"
+import WorldMap from "../assets/maps/world.svg?react"
 import "../styles/worldmap.css"
 
 type WorldmapProps = {
