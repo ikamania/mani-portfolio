@@ -33,7 +33,7 @@ const SocialLinks = () => {
         href="/resume.pdf"
         download
         className="
-          group hidden sm:flex items-center gap-2
+          group flex items-center gap-2
           px-2 py-2 text-sm text-muted
         "
       >

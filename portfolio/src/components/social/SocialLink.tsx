@@ -32,7 +32,7 @@ function SocialLink({
       </span>
 
       {external && (
-        <span className="hidden opacity-50 transition-opacity group-hover:opacity-100 sm:inline">
+        <span className="opacity-50 transition-opacity group-hover:opacity-100">
           ↗
         </span>
       )}
