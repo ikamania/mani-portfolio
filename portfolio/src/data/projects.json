@@ -1,25 +1,30 @@
 [
   {
-    "title": "E-Commerce Platform",
+    "title": "Knightly",
     "technologies": [
       "Python",
       "Django",
       "Django REST Framework",
+      "Django Channels",
+      "Daphne",
       "React",
+      "TypeScript",
       "Vite",
       "Tailwind CSS",
+      "WebSockets",
+      "python-chess",
       "Docker",
       "Docker Compose"
     ],
-    "link": "https://github.com/ikamania/e-store",
-    "images": "e-store/",
+    "link": "https://github.com/ikamania/knightly",
+    "images": "knightly/",
     "learned": [
-      "Built a REST API using Django REST Framework",
-      "Implemented user authentication and authorization",
-      "Connected a React frontend to a Django backend",
-      "Built reusable UI components with React and Tailwind CSS",
+      "Built a real-time multiplayer application using Django Channels and WebSockets",
+      "Implemented JWT-based authentication with Django REST Framework SimpleJWT",
+      "Used python-chess to handle chess game logic and validate moves",
+      "Implemented real-time gameplay and communication between players",
       "Built and managed a multi-container development environment using Docker and Docker Compose",
-      "Learned how to structure and develop a full-stack application"
+      "Learned how to combine REST APIs with WebSocket-based communication"
     ]
   },
   {
@@ -48,31 +53,26 @@
     ]
   },
   {
-    "title": "Knightly",
+    "title": "E-Commerce Platform",
     "technologies": [
       "Python",
       "Django",
       "Django REST Framework",
-      "Django Channels",
-      "Daphne",
       "React",
-      "TypeScript",
       "Vite",
       "Tailwind CSS",
-      "WebSockets",
-      "python-chess",
       "Docker",
       "Docker Compose"
     ],
-    "link": "https://github.com/ikamania/knightly",
-    "images": "knightly/",
+    "link": "https://github.com/ikamania/e-store",
+    "images": "e-store/",
     "learned": [
-      "Built a real-time multiplayer application using Django Channels and WebSockets",
-      "Implemented JWT-based authentication with Django REST Framework SimpleJWT",
-      "Used python-chess to handle chess game logic and validate moves",
-      "Implemented real-time gameplay and communication between players",
+      "Built a REST API using Django REST Framework",
+      "Implemented user authentication and authorization",
+      "Connected a React frontend to a Django backend",
+      "Built reusable UI components with React and Tailwind CSS",
       "Built and managed a multi-container development environment using Docker and Docker Compose",
-      "Learned how to combine REST APIs with WebSocket-based communication"
+      "Learned how to structure and develop a full-stack application"
     ]
   },
   {

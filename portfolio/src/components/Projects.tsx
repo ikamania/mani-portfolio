@@ -87,11 +87,6 @@ function Projects() {
           </ul>
         </div>
 
-        <PictureStack
-          key={project.images}
-          images={images}
-        />
-
         <div className="flex flex-wrap gap-[.5rem]">
           {project.technologies.map((technology) => (
             <TechBadge
@@ -100,6 +95,11 @@ function Projects() {
             />
           ))}
         </div>
+
+        <PictureStack
+          key={project.images}
+          images={images}
+        />
 
         <Navigation
           onPrevious={handlePrevious}

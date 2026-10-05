@@ -31,14 +31,14 @@ function PictureStack({ images }: PictureStackProps) {
 
   return (
     <>
-      <div className="flex w-full">
+      <div className="flex w-full justify-center">
         <div className="flex flex-col">
-          <div className="flex h-[16rem] w-full max-w-[30rem] items-center justify-center sm:h-[20rem]">
+          <div>
             <img
               src={images[current]}
               alt={`Screenshot ${current + 1} of ${images.length}`}
               onClick={() => setIsFullscreen(true)}
-              className="max-h-full max-w-full cursor-pointer object-contain transition-transform hover:scale-[1.02]"
+              className="mb-[1rem] max-h-full max-w-full cursor-pointer object-contain transition-transform hover:scale-[1.02]"
             />
           </div>
 
@@ -49,10 +49,10 @@ function PictureStack({ images }: PictureStackProps) {
               aria-label="Previous screenshot"
               className="cursor-pointer transition-colors hover:text-accent"
             >
-              <LuChevronLeft size={22} />
+              <LuChevronLeft size={15} />
             </button>
 
-            <span className="text-sm">
+            <span className="text-xs font-bold">
               {current + 1} / {images.length}
             </span>
 
@@ -62,7 +62,7 @@ function PictureStack({ images }: PictureStackProps) {
               aria-label="Next screenshot"
               className="cursor-pointer transition-colors hover:text-accent"
             >
-              <LuChevronRight size={22} />
+              <LuChevronRight size={15} />
             </button>
           </div>
         </div>

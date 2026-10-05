@@ -9,7 +9,7 @@ function Navigation({ onPrevious, onNext, currentProject, totalProjects }: Navig
   return (
     <div
       className="
-        flex justify-between px-5 text-accent font-medium
+        flex justify-between px-5 text-accent font-medium relative
       "
     >
       <button
@@ -20,7 +20,7 @@ function Navigation({ onPrevious, onNext, currentProject, totalProjects }: Navig
         ← Previous
       </button>
 
-      <span className="text-sm text-muted">
+      <span className="text-sm text-muted absolute right-1/2 translate-x-1/2">
         {currentProject}/{totalProjects}
       </span>
 
