@@ -30,8 +30,8 @@ const SocialLinks = () => {
       />
 
       <a
-        href="/resume.pdf"
-        download
+        href={`${import.meta.env.BASE_URL}resume.pdf`}
+        download="Irakli-Mania-Resume.pdf"
         className="
           group flex items-center gap-2
           px-2 py-2 text-sm text-muted
