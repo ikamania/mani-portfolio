@@ -10,5 +10,5 @@ export default defineConfig({
     tailwindcss(),
     svgr()
   ],
-  base: "/mani-portfolio",
+  base: "/mani-portfolio/",
 })
