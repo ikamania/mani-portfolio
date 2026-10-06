@@ -92,5 +92,21 @@
       "Improved my understanding of algorithms, arrays, and data structures",
       "Structured a C project into multiple modules and automated builds with Make"
     ]
+  },
+  {
+  "title": "Hack Assembler",
+  "technologies": [
+  "Python"
+  ],
+  "link": "https://github.com/ikamania/hack_assembler",
+  "images": "hack-assembler/",
+  "learned": [
+  "Built a two-pass assembler for the Hack computer platform from the Nand2Tetris course",
+  "Implemented parsing and translation of Hack A-instructions and C-instructions into 16-bit binary machine code",
+  "Implemented a symbol table supporting predefined symbols, labels, and variables",
+  "Built separate modules for parsing, code generation, symbol management, and instruction translation",
+  "Implemented mnemonic-to-binary translation for destination, computation, and jump instructions",
+  "Learned how assembly languages are translated into machine code and gained a deeper understanding of computer architecture"
+  ]
   }
 ]
