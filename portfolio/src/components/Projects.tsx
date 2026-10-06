@@ -63,37 +63,41 @@ function Projects() {
 
       <div className="flex flex-1 flex-col justify-between px-4 py-3 sm:p-5">
         <div className="flex flex-col gap-3 sm:flex-row sm:justify-between sm:gap-4">
-          <div>
+          <div className="w-full">
             <h2 className="mb-1 text-lg font-medium text-accent sm:mb-2 sm:text-xl">
               {project.title}
             </h2>
 
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative text-sm text-muted"
-            >
-              View Source ↗
+            <div className="flex flex-col gap-4 sm:flex-row sm:justify-between">
+              <div className="contents sm:flex sm:flex-col sm:gap-4">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-fit group relative order-1 text-sm text-muted sm:order-none"
+                >
+                  View Source ↗
 
-              <span className="absolute -bottom-1 left-0 h-px w-0 bg-muted transition-all duration-300 group-hover:w-full" />
-            </a>
+                  <span className="absolute -bottom-1 left-0 h-px w-0 bg-muted transition-all duration-300 group-hover:w-full" />
+                </a>
+
+                <div className="order-3 flex max-w-full sm:max-w-[15rem] flex-wrap gap-[.5rem] sm:order-none">
+                  {project.technologies.map((technology) => (
+                    <TechBadge
+                      key={technology}
+                      language={technology}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              <ul className="order-2 max-w-sm space-y-1 text-xs text-muted sm:order-none sm:text-sm">
+                {project.learned.map((item) => (
+                  <li key={item}>• {item}</li>
+                ))}
+              </ul>
+            </div>
           </div>
-
-          <ul className="max-w-sm space-y-1 text-xs text-muted sm:text-sm">
-            {project.learned.map((item) => (
-              <li key={item}>• {item}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="flex flex-wrap gap-[.5rem]">
-          {project.technologies.map((technology) => (
-            <TechBadge
-              key={technology}
-              language={technology}
-            />
-          ))}
         </div>
 
         <PictureStack
